@@ -1,25 +1,64 @@
 import React from "react";
 
 //include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import Navbar from "./Navbar.jsx";
+import Jumbotron from "./Jumbotron.jsx";
+import Card from "./Card.jsx";
 
 //create your first component
 const Home = () => {
 	return (
-		<div>
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
+		<>
+			<Navbar />
+			<div className="container">
+				<div className="row">
+					<div className="col-md-12 ">
+						<Jumbotron
+							title="A warm Welcom!"
+							description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed ad reiciendis ratione maxime molestiae aliquam dicta ex aspernatur iusto corrupti officiis nesciunt assumenda, quis nostrum doloribus laborum natus in quibusdam."
+							buttonLabel="Call to action!"
+							buttonURL=""
+						/>
+					</div>
+				</div>
+			</div>
+			<div className="container">
+				<div className="row">
+					<div className="col-md-3">
+						<Card
+							title="Card Title"
+							description="Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+							buttonLabel="Find Out More!"
+							buttonURL="https://reactjs.org/"
+						/>
+					</div>
+					<div className="col-md-3">
+						<Card
+							title="Card Title"
+							description="Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+							buttonLabel="Find Out More!"
+							buttonURL="https://reactjs.org/"
+						/>
+					</div>
+					<div className="col-md-3">
+						<Card
+							title="Card Title"
+							description="Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+							buttonLabel="Find Out More!"
+							buttonURL="https://reactjs.org/"
+						/>
+					</div>
+					<div className="col-md-3">
+						<Card
+							title="Card Title"
+							description="Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+							buttonLabel="Find Out More!"
+							buttonURL="https://reactjs.org/"
+						/>
+					</div>
+				</div>
+			</div>
+		</>
 	);
 };
 
